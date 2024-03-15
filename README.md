@@ -1,4 +1,4 @@
-#Logger.h
+# Logger.h
 A simple Log header-only library in c++ for personal use.
 
 ## References 
