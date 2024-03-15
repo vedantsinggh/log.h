@@ -5,13 +5,26 @@
 
 void Log(std::string  message);
 void Log(int level, std::string  message);
+void ColorLog(int color, std::string message);
 
 enum LOG_LEVEL{
 	SUCCESS, 
 	INFO,
-    ERROR,
-    WARN,
+	ERROR,
+	WARN,
 };
+
+enum LOG_COLOR{
+	BLACK=30,
+	RED,
+	GREEN,
+	YELLOW,
+	BLUE,
+	VOILET,
+	CYAN,
+	WHITE
+};
+
 #endif //LOG_H
 
 #ifdef LOG_IMPLEMENTATION
@@ -40,6 +53,10 @@ void Log(int level, std::string  message){
 
 void Log(std::string  message){
 	std::cout<<message<<std::endl;
+}
+
+void ColorLog(int color, std::string  message){
+	std::cout<< "\033["<< color << "m" << message << "\033[m" << std::endl;
 }
 
 #endif //LOG_IMPLEMENTATION
