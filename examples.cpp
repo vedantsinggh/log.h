@@ -14,4 +14,8 @@ int main(){
 	
 	// use ColorLog(COLOR, string) with COLOE enum to print different colers onto terminal
 	ColorLog(CYAN ,"This is colored text.");
+
+
+	// use Log(CODE, string) with different CODE enums to display different kinds of colored log messages 
+	Log(SUCCESS ,45);
 }
